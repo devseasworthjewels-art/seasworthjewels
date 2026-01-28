@@ -9,11 +9,12 @@ export const FIREBASE_CONFIG = {
 };
 
 export const EMAILJS_CONFIG = {
-  serviceId: "service_mg3x0a3",
-  publicKey: "INZE7O7NXIAMrRTC8",
+  serviceId: "service_a2hsakd",
+  publicKey: "4snk89T5XKjb_fwsF",
+  privateKey: "i5lfHqcmgbDq2gBm8E1ZC", // Added private key for reference
   templates: {
-    contact: "template_45vgl9f",
+    contact: "template_0hmu4ek", // New contact enquiry form template
     quotaAlert: "YOUR_QUOTA_ALERT_TEMPLATE_ID",
-    enquiryNotification: "template_f5y43ps",
+    enquiryNotification: "template_ham135o", // New customer enquiry from pdp template
   },
 };
