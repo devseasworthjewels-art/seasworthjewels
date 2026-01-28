@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Optional: Add smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+#root {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navbar */
+
+.tj-navbar {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 20;
+  color: #ffffff;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.45),
+    transparent
+  );
+}
+
+.tj-navbar > div {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.tj-navbar a {
+  text-decoration: none;
+}
+
+.tj-navbar nav a {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+}
+
+.tj-navbar nav a:hover,
+.tj-navbar .tj-navbar-social a:hover {
+  color: #f9e1dd;
+}
+
+/* Hero Sections */
+
+section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Override for sticky sections */
+.hero-section,
+.collection-section {
+  position: sticky;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+  pointer-events: none;
+}
+
+/* Buttons */
+
+a {
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgba(249, 225, 221, 0.5);
+  outline-offset: 2px;
+}
+
+/* Typography */
+
+.playfair {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+/* Images */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  section {
+    min-height: 80vh;
+  }
+}

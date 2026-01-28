@@ -1,0 +1,77 @@
+/* Breadcrumb Component Styles */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.breadcrumb-link {
+    color: #4b5563;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+    color: #000;
+}
+
+.breadcrumb-sep {
+    color: #6b7280;
+    user-select: none;
+    margin: 0 0.25rem;
+}
+
+.breadcrumb-current {
+    color: #111827;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Page-specific breadcrumb adjustments */
+.about-page .breadcrumb,
+.contact-page .breadcrumb,
+.legal-page .breadcrumb {
+    margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .breadcrumb {
+        font-size: 0.85rem;
+        /* margin-top: 0; */
+        margin-bottom: 0.75rem;
+        gap: 0.25rem;
+    }
+
+    .breadcrumb-item {
+        gap: 0.25rem;
+    }
+
+    .breadcrumb-link {
+        text-decoration: none;
+        color: #4b5563;
+    }
+
+    .breadcrumb-sep {
+        margin: 0 0.25rem;
+        color: #6b7280;
+    }
+
+    .breadcrumb-current {
+        color: #111827;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}

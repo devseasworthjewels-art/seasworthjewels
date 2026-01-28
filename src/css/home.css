@@ -1,0 +1,66 @@
+/* src/css/home.css */
+
+/*
+  Stacked scroll sections – each section takes the full viewport height and
+  sticks to the top while scrolling, allowing the next section to slide over
+  the previous one. This creates the effect where the hero image scrolls behind
+  the collections, and subsequent sections appear above the prior ones.
+*/
+
+.stack-section {
+    position: sticky;
+    /* Keep the section fixed until the next one pushes it */
+    top: 0;
+    height: 100vh;
+    /* Full viewport height */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ensure later sections appear above earlier ones */
+    z-index: 1;
+}
+
+/* Increment z-index for each successive section to layer correctly */
+.hero-stack {
+    z-index: 1;
+}
+
+.collections-stack {
+    z-index: 2;
+}
+
+.placeholder-stack {
+    z-index: 3;
+    background: #f8f8f8;
+    /* subtle background for the placeholder */
+}
+
+/* Placeholder content styling */
+.placeholder-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder-content h2 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.placeholder-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Ensure the hero background image stays behind when scrolling */
+.hero-section {
+    /* Already full‑height; keep it behind other sections */
+    z-index: 0;
+}

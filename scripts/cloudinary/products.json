@@ -1,0 +1,14 @@
+[
+  {
+    "productId": 10001,
+    "YellowGold": "1,4,9,12",
+    "RoseGold": "2,5,8,11",
+    "WhiteGold": "3,6,7,10"
+  },
+  {
+    "productId": 10002,
+    "YellowGold": "1,5,10",
+    "RoseGold": "2,3,6,9",
+    "WhiteGold": "4,7,8"
+  }
+]

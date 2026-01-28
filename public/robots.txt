@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://seasworthjewels.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Disallow admin and private areas (if any)
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/

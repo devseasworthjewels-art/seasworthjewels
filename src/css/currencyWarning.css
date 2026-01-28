@@ -1,0 +1,84 @@
+.currency-warning-banner {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    border-left: 4px solid #991b1b;
+    padding: 12px 20px;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2);
+    animation: slideDown 0.3s ease-out;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.currency-warning-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.warning-icon {
+    width: 24px;
+    height: 24px;
+    color: #fef2f2;
+    flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.warning-text {
+    margin: 0;
+    color: #fef2f2;
+    font-size: 14px;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.warning-text strong {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .currency-warning-banner {
+        padding: 10px 16px;
+    }
+
+    .currency-warning-content {
+        gap: 10px;
+    }
+
+    .warning-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .warning-text {
+        font-size: 13px;
+    }
+}

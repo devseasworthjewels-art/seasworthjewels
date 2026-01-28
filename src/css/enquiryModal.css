@@ -1,0 +1,193 @@
+/* Enquiry Modal Overlay */
+.enquiry-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+/* Enquiry Modal */
+.enquiry-modal {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  width: 100%;
+  padding: 2.5rem;
+  position: relative;
+  border: 1px solid #e0e0e0;
+}
+
+/* Close Button */
+.enquiry-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.enquiry-modal-close:hover {
+  color: #333;
+  transform: rotate(90deg);
+}
+
+/* Modal Header */
+.enquiry-modal-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.enquiry-modal-header h2 {
+  font-size: 1.4rem;
+  color: #000000;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.enquiry-modal-header p {
+  color: #666666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Form */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Form Group */
+.enquiry-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.enquiry-form-group label {
+  font-size: 0.9rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+.enquiry-form-group input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #ffffff;
+  color: #000000;
+  transition: border-color 0.2s ease;
+}
+
+.enquiry-form-group input::placeholder {
+  color: #999999;
+}
+
+.enquiry-form-group input:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+.enquiry-form-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f5f5f5;
+}
+
+.enquiry-form-group input.enquiry-input-error {
+  border-color: #d32f2f;
+}
+
+/* Error Message */
+.enquiry-error-message {
+  font-size: 0.85rem;
+  color: #d32f2f;
+  margin-top: 0.5rem;
+}
+
+.enquiry-submit-error {
+  background: rgba(211, 47, 47, 0.08);
+  border: 1px solid rgba(211, 47, 47, 0.25);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  color: #d32f2f;
+  font-size: 0.9rem;
+}
+
+/* Submit Button */
+.enquiry-submit-btn {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.enquiry-submit-btn:hover:not(:disabled) {
+  background: #333333;
+}
+
+.enquiry-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .enquiry-modal {
+    padding: 2rem 1.5rem;
+    max-width: 95vw;
+  }
+
+  .enquiry-modal-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .enquiry-form-group input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .enquiry-submit-btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .enquiry-modal {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .enquiry-modal-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .enquiry-form-group input {
+    font-size: 16px;
+  }
+}

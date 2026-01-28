@@ -1,0 +1,18 @@
+.price-disclaimer {
+    background-color: transparent;
+    border: none;
+    color: #dc2626;
+    padding: 0;
+    margin: 8px 0;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 0;
+    display: block;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .price-disclaimer {
+        font-size: 12px;
+    }
+}
